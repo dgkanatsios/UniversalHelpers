@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI;
 using Windows.UI.Xaml.Media.Imaging;
+using UniversalHelpersDemo.Shared.Common;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,45 +31,23 @@ namespace UniversalHelpersDemo
         public MainPage()
         {
             this.InitializeComponent();
-            this.Loaded += MainPage_Loaded;
+            this.navigationHelper = new NavigationHelper(this);
         }
-
-        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        private NavigationHelper navigationHelper;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            InitializeSpriteSheet();
+            this.navigationHelper.OnNavigatedTo(e);
         }
 
-        private void InitializeSpriteSheet()
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            BitmapImage spriteSheet = new BitmapImage(new Uri(this.BaseUri, "/Images/Sheet1.png"));
-            UniversalHelpers.StoryboardHelpers.BeginSpriteSheetStoryboard(rectangle,
-                6, 5, spriteSheet, 240, 296, 10);
+            this.navigationHelper.OnNavigatedFrom(e);
         }
 
+      
 
 
-        private async void Sequential_Click(object sender, RoutedEventArgs e)
-        {
-            await rectangle.TranslateToAsync(10, 10, 1);
-            await rectangle.AnimateOpacityToAsync(0.3, 1);
-            await rectangle.TranslateByAsync(30, -10, 1);
-            await rectangle.RotateByAsync(45, 1);
-            await rectangle.SkewByAsync(3, 3, 2);
-            await rectangle.AnimateSolidColorFillToAsync(Colors.Red, 2, new Action(async () =>
-            {
-                await (new MessageDialog("Hi!")).ShowAsync();
-            }));
-
-        }
-
-        private void Parallel_Click(object sender, RoutedEventArgs e)
-        {
-            rectangle.TranslateToAsync(10, 10, 1);
-            rectangle.AnimateOpacityToAsync(0.3, 1);
-            rectangle.TranslateToAsync(30, -10, 1);
-            rectangle.RotateByAsync(45, 1);
-            rectangle.SkewByAsync(3, 3, 2);
-        }
+      
     }
 
 }

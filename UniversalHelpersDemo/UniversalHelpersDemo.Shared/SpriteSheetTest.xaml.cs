@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -21,13 +22,27 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ValidatorsPage : Page
+    public sealed partial class SpriteSheetTest : Page
     {
-        public ValidatorsPage()
+        public SpriteSheetTest()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
-          
+            
+            this.Loaded += SpriteSheetTest_Loaded;
+        }
+
+        void SpriteSheetTest_Loaded(object sender, RoutedEventArgs e)
+        {
+            InitializeSpriteSheet();
+        }
+
+ 
+        private void InitializeSpriteSheet()
+        {
+            BitmapImage spriteSheet = new BitmapImage(new Uri(this.BaseUri, "/Images/Sheet1.png"));
+            UniversalHelpers.StoryboardHelpers.BeginSpriteSheetStoryboard(rectangle,
+                6, 5, spriteSheet, 240, 296, 10);
         }
 
         private NavigationHelper navigationHelper;
@@ -40,5 +55,6 @@ namespace UniversalHelpersDemo
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
+
     }
 }

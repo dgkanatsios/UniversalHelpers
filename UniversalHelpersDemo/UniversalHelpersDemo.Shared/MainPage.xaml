@@ -8,22 +8,54 @@
     xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:Behaviors="using:UniversalHelpersDemo.Shared.Behaviors"
     xmlns:Media="using:Microsoft.Xaml.Interactions.Media"
+    xmlns:Behaviors1="using:UniversalHelpersDemo.Behaviors"
     x:Class="UniversalHelpersDemo.MainPage"
     mc:Ignorable="d">
 
 	<Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Rectangle Fill="#FFF4F4F5" x:Name="rectangle" RenderTransformOrigin="0.5,0.5"
-			HorizontalAlignment="Left" Height="296" Margin="33,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="240">
-			<Rectangle.RenderTransform>
-				<CompositeTransform/>
-			</Rectangle.RenderTransform>
-			<Interactivity:Interaction.Behaviors>
-				<Behaviors:DragElementBehavior Container="{Binding ElementName=grid}" HasInertiaOnTranslate="True"/>
-			</Interactivity:Interaction.Behaviors>
-			
-		</Rectangle>
-		<Button Content="Animate in parallel" HorizontalAlignment="Left" Margin="204,33,0,0" VerticalAlignment="Top" Click="Parallel_Click"/>
-		<Button Content="Animate sequentially" HorizontalAlignment="Left" Margin="16,33,0,0" VerticalAlignment="Top" Click="Sequential_Click"/>
-
+		<StackPanel HorizontalAlignment="Left" Height="382" VerticalAlignment="Top" Width="167" Margin="28,42,0,0">
+			<Button Content="FeedbackBehavior" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.FeedbackBehaviorTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+			<Button Content="TapStoryboardBehavior" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.TapStoryboardBehaviorTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+			<Button Content="MovementToElement" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.MovementToElementTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+			<Button Content="SpriteSheet" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.SpriteSheetTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+			<Button Content="StoryboardExtensions" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.StoryboardExtensionsTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+			<Button Content="ValidatorsTest" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.ValidatorsPage"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
+		</StackPanel>
 	</Grid>
 </Page>

@@ -36,7 +36,7 @@ namespace UniversalHelpersDemo.Behaviors
         public static readonly DependencyProperty OpacityOnPressedProperty =
             DependencyProperty.Register("OpacityOnPressed", typeof(double), typeof(FeedbackBehavior), new PropertyMetadata(0.3));
 
-        
+
 
         public DependencyObject AssociatedObject
         {
@@ -56,41 +56,33 @@ namespace UniversalHelpersDemo.Behaviors
 
         void ImageFeedbackBehavior_PointerReleased(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            FrameworkElement fe = sender as FrameworkElement;
-            CompositeTransform ct = Utilities.GetCompositeTransform(fe);
-
+            CompositeTransform ct = Utilities.GetCompositeTransform(AssociatedObject as FrameworkElement);
             ct.ScaleX = ct.ScaleY = 1.0;
-            fe.Opacity = 1;
+            (AssociatedObject as FrameworkElement).Opacity = 1;
         }
 
         void ImageFeedbackBehavior_PointerPressed(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            
-
-            FrameworkElement fe = sender as FrameworkElement;
-            CompositeTransform ct = Utilities.GetCompositeTransform(fe);
-
+            CompositeTransform ct = Utilities.GetCompositeTransform(AssociatedObject as FrameworkElement);
             ct.ScaleX = ct.ScaleY = 1.0;
-            fe.Opacity = OpacityOnPressed;
+            (AssociatedObject as FrameworkElement).Opacity = OpacityOnPressed;
         }
 
         void ImageFeedbackBehavior_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            FrameworkElement fe = sender as FrameworkElement;
-            CompositeTransform ct = Utilities.GetCompositeTransform(fe);
-            
+            CompositeTransform ct = Utilities.GetCompositeTransform(AssociatedObject as FrameworkElement);
+
 
             ct.ScaleX = ct.ScaleY = 1.0;
-            fe.Opacity = 1;
+            (AssociatedObject as FrameworkElement).Opacity = 1;
         }
 
         void ImageFeedbackBehavior_PointerMoved(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            FrameworkElement fe = sender as FrameworkElement;
-            CompositeTransform ct = Utilities.GetCompositeTransform(fe);
-            
+            CompositeTransform ct = Utilities.GetCompositeTransform(AssociatedObject as FrameworkElement);
+
             ct.ScaleX = ct.ScaleY = ScaleWhenMoving;
-            fe.Opacity = 1;
+            (AssociatedObject as FrameworkElement).Opacity = 1;
         }
 
         public void Detach()

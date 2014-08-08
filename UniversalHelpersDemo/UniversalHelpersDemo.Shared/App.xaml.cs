@@ -37,6 +37,8 @@ namespace UniversalHelpersDemo
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+
         }
 
         /// <summary>
@@ -103,6 +105,7 @@ namespace UniversalHelpersDemo
 
             // Ensure the current window is active
             Window.Current.Activate();
+
         }
 
 #if WINDOWS_PHONE_APP
@@ -133,5 +136,6 @@ namespace UniversalHelpersDemo
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
     }
 }

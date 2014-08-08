@@ -17,25 +17,58 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\DragElementBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FeedbackBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TapStoryboardBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxBehaviors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxValidatorBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FeedbackBehaviorTest.xaml.cs">
+      <DependentUpon>FeedbackBehaviorTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml.cs">
       <DependentUpon>MovementToElementTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml.cs">
+      <DependentUpon>SpriteSheetTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StoryboardExtensionsTest.xaml.cs">
+      <DependentUpon>StoryboardExtensionsTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml.cs">
+      <DependentUpon>TapStoryboardBehaviorTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ValidatorsPage.xaml.cs">
       <DependentUpon>ValidatorsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)FeedbackBehaviorTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)StoryboardExtensionsTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

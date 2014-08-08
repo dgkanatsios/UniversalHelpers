@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UniversalHelpersDemo.Shared.Common;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,13 +22,18 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ValidatorsPage : Page
+    public sealed partial class TapStoryboardBehaviorTest : Page
     {
-        public ValidatorsPage()
+        public TapStoryboardBehaviorTest()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
-          
+         
+        }
+
+        public void ShowDialog(object Tag)
+        {
+            (new MessageDialog(Tag.ToString())).ShowAsync();
         }
 
         private NavigationHelper navigationHelper;

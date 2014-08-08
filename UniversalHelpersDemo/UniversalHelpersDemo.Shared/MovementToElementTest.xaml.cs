@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UniversalHelpers;
+using UniversalHelpersDemo.Shared.Common;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +27,17 @@ namespace UniversalHelpersDemo
         public MovementToElementTest()
         {
             this.InitializeComponent();
+            this.navigationHelper = new NavigationHelper(this);
+        }
+        private NavigationHelper navigationHelper;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.navigationHelper.OnNavigatedTo(e);
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            this.navigationHelper.OnNavigatedFrom(e);
         }
 
         private void testButton_Click(object sender, RoutedEventArgs e)
