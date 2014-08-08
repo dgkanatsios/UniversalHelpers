@@ -56,6 +56,13 @@
 					</Core:EventTriggerBehavior>
 				</Interactivity:Interaction.Behaviors>
 			</Button>
+			<Button Content="DragElementTest" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Interactivity:Interaction.Behaviors>
+					<Core:EventTriggerBehavior EventName="Click">
+						<Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.DragElementTest"/>
+					</Core:EventTriggerBehavior>
+				</Interactivity:Interaction.Behaviors>
+			</Button>
 		</StackPanel>
 	</Grid>
 </Page>

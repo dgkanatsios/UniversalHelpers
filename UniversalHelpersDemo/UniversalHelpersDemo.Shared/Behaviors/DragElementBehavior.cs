@@ -84,7 +84,7 @@ namespace UniversalHelpersDemo.Shared.Behaviors
 
         // Using a DependencyProperty as the backing store for MaxScale.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MaxScaleProperty =
-            DependencyProperty.Register("MaxScale", typeof(double), typeof(DragElementBehavior), new PropertyMetadata(2));
+            DependencyProperty.Register("MaxScale", typeof(double), typeof(DragElementBehavior), new PropertyMetadata(2.0));
 
 
 

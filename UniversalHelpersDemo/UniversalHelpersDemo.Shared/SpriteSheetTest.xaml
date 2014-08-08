@@ -15,10 +15,7 @@
             <Rectangle.RenderTransform>
                 <CompositeTransform/>
             </Rectangle.RenderTransform>
-            <Interactivity:Interaction.Behaviors>
-                <Behaviors:DragElementBehavior Container="{Binding ElementName=grid}" HasInertiaOnTranslate="True"/>
-            </Interactivity:Interaction.Behaviors>
-
+           
         </Rectangle>
     </Grid>
 </Page>
