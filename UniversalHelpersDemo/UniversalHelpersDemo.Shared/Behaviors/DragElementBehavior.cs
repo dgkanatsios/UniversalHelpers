@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniversalHelpersDemo.Behaviors;
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -14,10 +15,6 @@ namespace UniversalHelpersDemo.Shared.Behaviors
 {
     //http://dotnetbyexample.blogspot.nl/2014/05/writing-behaviors-in-pcl-for-windows.html
 
-    public enum Lala
-    {
-        a,b,g,d
-    }
 
     [TypeConstraint(typeof(FrameworkElement))]
     public class DragElementBehavior : DependencyObject, IBehavior
@@ -28,7 +25,6 @@ namespace UniversalHelpersDemo.Shared.Behaviors
             private set;
         }
 
-        public Lala Lolo { get; set; }
 
 
         [CustomPropertyValueEditor(CustomPropertyValueEditor.ElementBinding)]
@@ -133,14 +129,14 @@ namespace UniversalHelpersDemo.Shared.Behaviors
 
         void element_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
         {
-            CompositeTransform ct = GetCompositeTransform(element);
+            CompositeTransform ct = Utilities.GetCompositeTransform(element);
             if (Container != null)
                 ValidatePosition(ct, null);
         }
 
         void element_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
         {
-            CompositeTransform ct = GetCompositeTransform(element);
+            CompositeTransform ct = Utilities.GetCompositeTransform(element);
 
             ct.TranslateX += e.Delta.Translation.X;
             ct.TranslateY += e.Delta.Translation.Y;
@@ -220,29 +216,6 @@ namespace UniversalHelpersDemo.Shared.Behaviors
             element.ManipulationCompleted -= element_ManipulationCompleted;
         }
 
-        private CompositeTransform GetCompositeTransform(FrameworkElement element)
-        {
-            if (element.RenderTransform == null)
-            {
-                element.RenderTransform = new CompositeTransform();
-                return element.RenderTransform as CompositeTransform;
-            }
-            else if (element.RenderTransform is CompositeTransform)
-                return element.RenderTransform as CompositeTransform;
-            else if (element.RenderTransform is TransformGroup)
-            {
-                var cts =
-                       (element.RenderTransform as TransformGroup).Children.Where(x => x is CompositeTransform);
-                if (cts.Count() == 0)
-                    throw new ArgumentException("Element must have a composite transform");
-                else
-                    return cts.First() as CompositeTransform;
-            }
-
-            else
-            {
-                throw new ArgumentException("Element must have a composite transform");
-            }
-        }
+       
     }
 }

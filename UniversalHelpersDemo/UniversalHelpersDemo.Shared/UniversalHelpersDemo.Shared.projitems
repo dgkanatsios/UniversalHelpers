@@ -16,8 +16,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\DragElementBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FeedbackBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxBehaviors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxValidatorBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\Utilities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
