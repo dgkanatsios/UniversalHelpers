@@ -37,6 +37,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml.cs">
       <DependentUpon>MovementToElementTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RateAppTest.xaml.cs">
+      <DependentUpon>RateAppTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml.cs">
       <DependentUpon>SpriteSheetTest.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)RateAppTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

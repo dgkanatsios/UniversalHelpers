@@ -8,8 +8,8 @@
     <ProjectGuid>{D7E28887-92E8-46DE-83A5-482625DBDAC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StoryboardLibrary</RootNamespace>
-    <AssemblyName>StoryboardLibrary</AssemblyName>
+    <RootNamespace>UniversalHelpers</RootNamespace>
+    <AssemblyName>UniversalHelpers</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingsHelper.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="NavigationHelper.cs" />
+    <Compile Include="RateHelpers.cs" />
     <Compile Include="StoryboardHelpers.cs" />
     <Compile Include="EventAsync.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
