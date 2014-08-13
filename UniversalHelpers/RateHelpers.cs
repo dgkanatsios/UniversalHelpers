@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,7 +48,8 @@ namespace UniversalHelpers
             MessageDialog md = new MessageDialog("Rate app content", "Rate app title");
 
             md.Commands.Add(new UICommand("Rate app", rate_RateNow_Click));
-#if WINDOWS_APP
+//you can't have more than 2 UICommands on WP
+          #if WINDOWS_APP
             md.Commands.Add(new UICommand("Remind me later", rate_RemindLater_Click));
 #endif
             md.Commands.Add(new UICommand("No thanks", rate_NoThanks_Click));
