@@ -71,6 +71,13 @@
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </Button>
+                <Button Content="ExpanderTest" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.ExpanderTest"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
