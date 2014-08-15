@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Expander.xaml.cs">
       <DependentUpon>Expander.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ScatterView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DragElementTest.xaml.cs">
       <DependentUpon>DragElementTest.xaml</DependentUpon>
@@ -38,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)FeedbackBehaviorTest.xaml.cs">
       <DependentUpon>FeedbackBehaviorTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Utilities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -46,6 +48,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)RateAppTest.xaml.cs">
       <DependentUpon>RateAppTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ScatterViewTest.xaml.cs">
+      <DependentUpon>ScatterViewTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ScatterViewTest2.xaml.cs">
+      <DependentUpon>ScatterViewTest2.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml.cs">
       <DependentUpon>SpriteSheetTest.xaml</DependentUpon>
@@ -89,6 +97,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ScatterViewTest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ScatterViewTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +123,31 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943701468742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943701648742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943702493742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943705993742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943707368742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943710988742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943712048742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943712313742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943713698742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943714293742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943715193742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943719778742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943720108742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943720638742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943720748742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943722393742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943723658742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943724998742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\10151943726363742.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\33816343741.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\33816483741.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\393112848741.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\393112968741.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\393452448741.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Photos\393452478741.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Sheet1.png" />
   </ItemGroup>
 </Project>

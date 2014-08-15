@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Media;
 
 namespace UniversalHelpersDemo.Shared.Behaviors
 {
-    //http://dotnetbyexample.blogspot.nl/2014/05/writing-behaviors-in-pcl-for-windows.html
-
 
     [TypeConstraint(typeof(FrameworkElement))]
     public class DragElementBehavior : DependencyObject, IBehavior
@@ -28,15 +26,15 @@ namespace UniversalHelpersDemo.Shared.Behaviors
 
 
         [CustomPropertyValueEditor(CustomPropertyValueEditor.ElementBinding)]
-        public Panel Container
+        public FrameworkElement Container
         {
-            get { return (Panel)GetValue(ContainerProperty); }
+            get { return (FrameworkElement)GetValue(ContainerProperty); }
             set { SetValue(ContainerProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Container.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ContainerProperty =
-            DependencyProperty.Register("Container", typeof(Panel), typeof(DragElementBehavior), new PropertyMetadata(null));
+            DependencyProperty.Register("Container", typeof(FrameworkElement), typeof(DragElementBehavior), new PropertyMetadata(null));
 
 
 
@@ -134,8 +132,14 @@ namespace UniversalHelpersDemo.Shared.Behaviors
                 ValidatePosition(ct, null);
         }
 
+        public event ManipulationStartedEventHandler ElementManipulationStarted;
+        public event ManipulationDeltaEventHandler ElementManipulationDelta;
+
         void element_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
         {
+            if (ElementManipulationDelta != null)
+                ElementManipulationDelta(sender, e);
+
             CompositeTransform ct = Utilities.GetCompositeTransform(element);
 
             ct.TranslateX += e.Delta.Translation.X;
@@ -206,7 +210,8 @@ namespace UniversalHelpersDemo.Shared.Behaviors
 
         void element_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
         {
-
+            if (ElementManipulationStarted != null)
+                ElementManipulationStarted(sender, e);
         }
 
         public void Detach()

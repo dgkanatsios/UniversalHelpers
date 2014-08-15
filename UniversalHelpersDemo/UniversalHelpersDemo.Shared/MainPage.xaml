@@ -13,7 +13,7 @@
     mc:Ignorable="d">
 
     <Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer HorizontalAlignment="Left"  VerticalAlignment="Top" Width="167" Margin="28,42,0,0">
+        <ScrollViewer HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Margin="28,42,0,0">
             <StackPanel >
                 <Button Content="FeedbackBehavior" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Interactivity:Interaction.Behaviors>
@@ -75,6 +75,20 @@
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.ExpanderTest"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Content="ScatterViewTest" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.ScatterViewTest"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Content="ScatterView Advanced" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="UniversalHelpersDemo.ScatterViewTest2"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </Button>
