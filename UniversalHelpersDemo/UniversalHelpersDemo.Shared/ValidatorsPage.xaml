@@ -18,7 +18,7 @@
 			<StackPanel Orientation="Horizontal" Height="32">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
-						<Behaviors:TextRequiredFieldBehavior ErrorTextBlock="{Binding ElementName=textBlock}" ErrorMessage="Required Field" ValidateOn="Both"/>
+						<Behaviors:TextRequiredFieldBehavior ErrorTextBlock="{Binding ElementName=textBlock}" ErrorMessage="Required Field" ValidateMode="Both"/>
 					</Interactivity:Interaction.Behaviors>
 				</TextBox>
 				<TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Style="{StaticResource ErrorTextStyle}"/>
@@ -27,7 +27,7 @@
 			<StackPanel Orientation="Horizontal" Height="32">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
-						<Behaviors:TextMinimumLengthBehavior ErrorTextBlock="{Binding ElementName=textBlock1}" MinimumLength="3" ErrorMessage="Text must be more than 3 characters" ValidateOn="Both"/>
+						<Behaviors:TextMinimumLengthBehavior ErrorTextBlock="{Binding ElementName=textBlock1}" MinimumLength="3" ErrorMessage="Text must be more than 3 characters" ValidateMode="Both"/>
 					</Interactivity:Interaction.Behaviors>
 				</TextBox>
 				<TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Style="{StaticResource ErrorTextStyle}"/>

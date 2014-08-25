@@ -11,10 +11,10 @@ namespace UniversalHelpersDemo.Behaviors
     {
         public TextBoxValidatorBase()
         {
-            ValidateOn = TextBoxValidateOn.Both;
+            ValidateMode = TextBoxValidateMode.Both;
         }
 
-        public TextBoxValidateOn ValidateOn
+        public TextBoxValidateMode ValidateMode
         { get; set; }
 
         public DependencyObject AssociatedObject
@@ -48,6 +48,20 @@ namespace UniversalHelpersDemo.Behaviors
             DependencyProperty.Register("ErrorTextBlock", typeof(TextBlock), typeof(TextBoxValidatorBase), new PropertyMetadata(null));
 
 
+        /// <summary>
+        /// If true, will add error string to existing. Will replace if false.
+        /// </summary>
+        public bool AddErrorMessage
+        {
+            get { return (bool)GetValue(AddErrorMessageProperty); }
+            set { SetValue(AddErrorMessageProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for AddErrorMessage.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty AddErrorMessageProperty =
+            DependencyProperty.Register("AddErrorMessage", typeof(bool), typeof(TextBoxValidatorBase), new PropertyMetadata(true));
+
+        
 
         public void Attach(DependencyObject associatedObject)
         {
@@ -65,13 +79,13 @@ namespace UniversalHelpersDemo.Behaviors
 
         void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (ValidateOn == TextBoxValidateOn.TextChanged || ValidateOn == TextBoxValidateOn.Both)
+            if (ValidateMode == TextBoxValidateMode.TextChanged || ValidateMode == TextBoxValidateMode.Both)
                 ShowHideError(Validate());
         }
 
         void textBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (ValidateOn == TextBoxValidateOn.LostFocus || ValidateOn == TextBoxValidateOn.Both)
+            if (ValidateMode == TextBoxValidateMode.LostFocus || ValidateMode == TextBoxValidateMode.Both)
                 ShowHideError(Validate());
         }
 
@@ -83,7 +97,10 @@ namespace UniversalHelpersDemo.Behaviors
             if (!isValid)
             {
                 ErrorTextBlock.Visibility = Visibility.Visible;
-                ErrorTextBlock.Text = ErrorMessage;
+                if (AddErrorMessage)
+                    ErrorTextBlock.Text += ErrorMessage;
+                else
+                    ErrorTextBlock.Text = ErrorMessage;
             }
             else
             {
@@ -105,7 +122,7 @@ namespace UniversalHelpersDemo.Behaviors
         public abstract bool Validate();
     }
 
-    public enum TextBoxValidateOn
+    public enum TextBoxValidateMode
     {
         TextChanged,
         LostFocus,
