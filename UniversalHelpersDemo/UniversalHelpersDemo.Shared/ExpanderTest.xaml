@@ -10,12 +10,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Controls:Expander HorizontalAlignment="Left" Margin="23,40,0,0" VerticalAlignment="Top" Height="151" Width="366">
+        <Controls:Expander HorizontalAlignment="Left" Margin="23,40,0,0" VerticalAlignment="Top"  Width="366" Background="LightGreen">
             <Controls:Expander.ExpanderContent>
                 <TextBlock Text="Hello expander!" />
             </Controls:Expander.ExpanderContent>
         </Controls:Expander>
-        <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Height="170" Width="374"/>
+        <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
 
     </Grid>
 </Page>
