@@ -25,13 +25,13 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ScatterViewTest2 : Page
+    public sealed partial class ScatterViewTest2 : ViewBase
+
     {
         public ScatterViewTest2()
         {
             this.InitializeComponent();
-            this.navigationHelper = new NavigationHelper(this);
-
+           
             this.Loaded += ScatterViewTest2_Loaded;
         }
 
@@ -51,16 +51,7 @@ namespace UniversalHelpersDemo
 
       
 
-        private NavigationHelper navigationHelper;
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedTo(e);
-        }
-
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedFrom(e);
-        }
+     
 
         public class ItemToBind
         {

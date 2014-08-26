@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UniversalHelpers;
 using UniversalHelpersDemo.Shared.Common;
+using UniversalHelpersDemo.Helpers;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,24 +23,12 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MovementToElementTest : Page
+    public sealed partial class MovementToElementTest : ViewBase
     {
         public MovementToElementTest()
         {
             this.InitializeComponent();
-            this.navigationHelper = new NavigationHelper(this);
         }
-        private NavigationHelper navigationHelper;
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedTo(e);
-        }
-
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedFrom(e);
-        }
-
         private void testButton_Click(object sender, RoutedEventArgs e)
         {
             //testButton.BeginTranslationToElementAsync(yellowRect, 3);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UniversalHelpersDemo.Helpers;
 using UniversalHelpersDemo.Shared.Common;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,12 +23,11 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SpriteSheetTest : Page
+    public sealed partial class SpriteSheetTest : ViewBase
     {
         public SpriteSheetTest()
         {
             this.InitializeComponent();
-            this.navigationHelper = new NavigationHelper(this);
             
             this.Loaded += SpriteSheetTest_Loaded;
         }
@@ -45,16 +45,6 @@ namespace UniversalHelpersDemo
                 6, 5, spriteSheet, 240, 296, 10);
         }
 
-        private NavigationHelper navigationHelper;
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedTo(e);
-        }
-
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedFrom(e);
-        }
-
+     
     }
 }

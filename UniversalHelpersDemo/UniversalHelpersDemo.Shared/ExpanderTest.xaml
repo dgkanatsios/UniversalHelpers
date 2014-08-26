@@ -1,6 +1,7 @@
-﻿<Page
+﻿<helpers:ViewBase
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:helpers="using:UniversalHelpersDemo.Helpers"
     xmlns:local="using:UniversalHelpersDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -26,4 +27,4 @@
         <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,222,0,0" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
 
     </Grid>
-</Page>
+</helpers:ViewBase>

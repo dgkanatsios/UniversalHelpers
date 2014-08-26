@@ -16,6 +16,7 @@ using UniversalHelpers;
 using Windows.UI;
 using Windows.UI.Popups;
 using UniversalHelpersDemo.Shared.Common;
+using UniversalHelpersDemo.Helpers;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,13 +25,12 @@ namespace UniversalHelpersDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StoryboardExtensionsTest : Page
+    public sealed partial class StoryboardExtensionsTest : ViewBase
     {
         public StoryboardExtensionsTest()
         {
             this.InitializeComponent();
-            this.navigationHelper = new NavigationHelper(this);
-         
+        
         }
 
         private async void Sequential_Click(object sender, RoutedEventArgs e)
@@ -56,15 +56,5 @@ namespace UniversalHelpersDemo
             rectangle.SkewByAsync(3, 3, 2);
         }
 
-        private NavigationHelper navigationHelper;
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedTo(e);
-        }
-
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            this.navigationHelper.OnNavigatedFrom(e);
-        }
     }
 }

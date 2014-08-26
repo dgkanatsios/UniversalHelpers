@@ -38,6 +38,7 @@
       <DependentUpon>FeedbackBehaviorTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

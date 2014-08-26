@@ -1,5 +1,6 @@
-﻿<Page
+﻿<helpers:ViewBase
     x:Class="UniversalHelpersDemo.RateAppTest"
+    xmlns:helpers="using:UniversalHelpersDemo.Helpers"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UniversalHelpersDemo"
@@ -10,4 +11,4 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     </Grid>
-</Page>
+</helpers:ViewBase>
