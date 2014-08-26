@@ -17,8 +17,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\DragElementBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\FeedbackBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\SelectAllTextOnFocusBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TapStoryboardBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxBehaviors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxValidationBehaviors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\TextBoxValidatorBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\Utilities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
@@ -62,6 +63,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml.cs">
       <DependentUpon>TapStoryboardBehaviorTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TextBoxFocusSample.xaml.cs">
+      <DependentUpon>TextBoxFocusSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ValidatorsPage.xaml.cs">
       <DependentUpon>ValidatorsPage.xaml</DependentUpon>
@@ -109,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TextBoxFocusSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
