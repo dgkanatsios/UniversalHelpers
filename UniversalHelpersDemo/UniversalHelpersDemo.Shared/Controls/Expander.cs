@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Media;
 namespace UniversalHelpersDemo.Controls
 {
     [TemplatePart(Name = HeaderTextName, Type = typeof(TextBlock))]
-    [TemplatePart(Name = OpenButtonName, Type = typeof(Button))]
+    [TemplatePart(Name = ExpandButtonName, Type = typeof(Button))]
     [TemplatePart(Name = ExpanderContentName, Type = typeof(ContentPresenter))]
     [TemplateVisualState(Name = "Expanded", GroupName = "CommonStates")]
     [TemplateVisualState(Name = "NotExpanded", GroupName = "CommonStates")]
@@ -22,9 +22,9 @@ namespace UniversalHelpersDemo.Controls
     {
 
         private const string HeaderTextName = "PART_HeaderText";
-        private const string OpenButtonName = "PART_OpenButton";
+        private const string ExpandButtonName = "PART_ExpandButton";
         private const string ExpanderContentName = "PART_ExpanderContent";
-        private Button openButton;
+        private Button expandButton;
         private ContentPresenter expanderContentName;
 
         public Expander()
@@ -34,16 +34,16 @@ namespace UniversalHelpersDemo.Controls
 
         protected override void OnApplyTemplate()
         {
-            openButton = GetTemplateChild(OpenButtonName) as Button;
-            if (openButton != null)
+            expandButton = GetTemplateChild(ExpandButtonName) as Button;
+            if (expandButton != null)
             {
-                openButton.Click += openButton_Click;
+                expandButton.Click += expandButton_Click;
             }
             expanderContentName = GetTemplateChild(ExpanderContentName) as ContentPresenter;
             base.OnApplyTemplate();
         }
 
-        void openButton_Click(object sender, RoutedEventArgs e)
+        void expandButton_Click(object sender, RoutedEventArgs e)
         {
             ChangeExpanded(true);
         }
@@ -55,11 +55,13 @@ namespace UniversalHelpersDemo.Controls
                 if (IsExpanded)
                 {
                     VisualStateManager.GoToState(this, "NotExpanded", true);
+                    VisualStateManager.GoToState(expandButton, "NotExpanded", true);
                     if (changeDP) SetValue(IsExpandedProperty, false);
                 }
                 else
                 {
                     VisualStateManager.GoToState(this, "Expanded", true);
+                    VisualStateManager.GoToState(expandButton, "Expanded", true);
                     if (changeDP) SetValue(IsExpandedProperty, true);
                 }
             }

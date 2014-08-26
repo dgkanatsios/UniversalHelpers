@@ -12,10 +12,18 @@
 
         <Controls:Expander HorizontalAlignment="Left" Margin="23,40,0,0" VerticalAlignment="Top"  Width="366" Background="LightGreen">
             <Controls:Expander.ExpanderContent>
-                <TextBlock Text="Hello expander!" />
+                <StackPanel>
+                <TextBlock Text="Hello expander 1!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 2!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 3!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 4!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 5!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 6!" Foreground="Black" />
+                    <TextBlock Text="Hello expander 7!" Foreground="Black" />
+                </StackPanel>
             </Controls:Expander.ExpanderContent>
         </Controls:Expander>
-        <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
+        <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,222,0,0" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
 
     </Grid>
 </Page>
