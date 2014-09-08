@@ -26,69 +26,58 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CiclePanelView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\Expander.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\ScatterView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DragElementTest.xaml.cs">
-      <DependentUpon>DragElementTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ExpanderTest.xaml.cs">
-      <DependentUpon>ExpanderTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)FeedbackBehaviorTest.xaml.cs">
-      <DependentUpon>FeedbackBehaviorTest.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SampleItemToBind.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Utilities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml.cs">
-      <DependentUpon>MovementToElementTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)RateAppTest.xaml.cs">
       <DependentUpon>RateAppTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ScatterViewTest.xaml.cs">
-      <DependentUpon>ScatterViewTest.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\DragElementTest.xaml.cs">
+      <DependentUpon>DragElementTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ScatterViewTest2.xaml.cs">
-      <DependentUpon>ScatterViewTest2.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\FeedbackBehaviorTest.xaml.cs">
+      <DependentUpon>FeedbackBehaviorTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml.cs">
-      <DependentUpon>SpriteSheetTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)StoryboardExtensionsTest.xaml.cs">
-      <DependentUpon>StoryboardExtensionsTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\TapStoryboardBehaviorTest.xaml.cs">
       <DependentUpon>TapStoryboardBehaviorTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)TextBoxFocusSample.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\TextBoxFocusSample.xaml.cs">
       <DependentUpon>TextBoxFocusSample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ValidatorsPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\ValidatorsPage.xaml.cs">
       <DependentUpon>ValidatorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Controls\ExpanderTest.xaml.cs">
+      <DependentUpon>ExpanderTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Panels\CirclePanelViewTest.xaml.cs">
+      <DependentUpon>CirclePanelViewTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Panels\ScatterViewTest.xaml.cs">
+      <DependentUpon>ScatterViewTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Panels\ScatterViewTest2.xaml.cs">
+      <DependentUpon>ScatterViewTest2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\MovementToElementTest.xaml.cs">
+      <DependentUpon>MovementToElementTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\SpriteSheetTest.xaml.cs">
+      <DependentUpon>SpriteSheetTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\StoryboardExtensionsTest.xaml.cs">
+      <DependentUpon>StoryboardExtensionsTest.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)DragElementTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ExpanderTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)FeedbackBehaviorTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)MovementToElementTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,35 +85,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ScatterViewTest2.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\DragElementTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ScatterViewTest.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\FeedbackBehaviorTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)SpriteSheetTest.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\TapStoryboardBehaviorTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)StoryboardExtensionsTest.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\TextBoxFocusSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)TapStoryboardBehaviorTest.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Behaviors\ValidatorsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)TextBoxFocusSample.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Controls\ExpanderTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Panels\CirclePanelViewTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Panels\ScatterViewTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Panels\ScatterViewTest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\MovementToElementTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\SpriteSheetTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SamplePages\Storyboard\StoryboardExtensionsTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Themes\Generic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ValidatorsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

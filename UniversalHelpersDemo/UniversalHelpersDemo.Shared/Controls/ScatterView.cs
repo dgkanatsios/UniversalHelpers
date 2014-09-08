@@ -60,8 +60,8 @@ namespace UniversalHelpersDemo.Controls
                 behavior.ElementManipulationStarted += behavior_ElementManipulationStarted;
                 fe.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Center;
                 fe.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Center;
-                (fe).RenderTransform = new CompositeTransform();
-                (fe).RenderTransformOrigin = new Point(0.5, 0.5);
+                fe.RenderTransform = new CompositeTransform();
+                fe.RenderTransformOrigin = new Point(0.5, 0.5);
                 (fe.RenderTransform as CompositeTransform).Rotation = -30 + rotation * i;
 
                 Interaction.GetBehaviors(fe).Add(behavior);

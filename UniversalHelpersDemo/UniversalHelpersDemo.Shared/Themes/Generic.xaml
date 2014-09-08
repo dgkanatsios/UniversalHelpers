@@ -14,12 +14,12 @@
 									<Storyboard>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ExpanderContent"
 												Storyboard.TargetProperty="Visibility">
-											<DiscreteObjectKeyFrame KeyTime="0"
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00.2"
 											Value="Visible" />
 										</ObjectAnimationUsingKeyFrames>
 										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ExpanderContent"
 												Storyboard.TargetProperty="Opacity">
-											<EasingDoubleKeyFrame KeyTime="00:00:00.3"
+											<EasingDoubleKeyFrame KeyTime="00:00:00.2"
 											Value="1" />
 										</DoubleAnimationUsingKeyFrames>
 									</Storyboard>
@@ -28,13 +28,13 @@
 									<Storyboard>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ExpanderContent"
 												Storyboard.TargetProperty="Visibility">
-											<DiscreteObjectKeyFrame KeyTime="00:00:00.3"
+											<DiscreteObjectKeyFrame KeyTime="00:00:00.2"
 											Value="Collapsed" />
 										</ObjectAnimationUsingKeyFrames>
 										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ExpanderContent"
 												Storyboard.TargetProperty="Opacity">
-											<EasingDoubleKeyFrame KeyTime="00:00:00.3"
-											Value="0" />
+											<EasingDoubleKeyFrame KeyTime="00:00:00.2"
+											Value="1" />
 										</DoubleAnimationUsingKeyFrames>
 									</Storyboard>
 								</VisualState>

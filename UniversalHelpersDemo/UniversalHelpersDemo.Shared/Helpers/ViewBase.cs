@@ -17,16 +17,18 @@ namespace UniversalHelpersDemo.Helpers
 
            this.Loaded+=ViewBase_Loaded;
         }
-
+#if WINDOWS_APP
         private Button backButton;
+#endif
 
         void ViewBase_Loaded(object sender, RoutedEventArgs e)
         {
-            Grid rootGrid = VisualTreeHelper.GetChild(Window.Current.Content, 0) as Grid;
-            var backButton = (Button)VisualTreeHelper.GetChild(rootGrid, 1) as Button;
+          
 
 
 #if WINDOWS_APP
+            Grid rootGrid = VisualTreeHelper.GetChild(Window.Current.Content, 0) as Grid;
+            var backButton = (Button)VisualTreeHelper.GetChild(rootGrid, 1) as Button;
             if(!(this is MainPage))
             {
                 backButton.Click -= backButton_Click; backButton.Click += backButton_Click;
@@ -36,8 +38,6 @@ namespace UniversalHelpersDemo.Helpers
             {
                 backButton.Visibility = Visibility.Collapsed;
             }
-#elif WINDOWS_PHONE_APP
-            backButton.Visibility = Visibility.Collapsed;
 #endif
             
         }

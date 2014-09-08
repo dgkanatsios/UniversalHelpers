@@ -37,26 +37,14 @@ namespace UniversalHelpersDemo
 
         async void ScatterViewTest2_Loaded(object sender, RoutedEventArgs e)
         {
-            List<ItemToBind> ItemsToBind = new List<ItemToBind>();
-            List<BitmapImage> Photos = await Utilities.GetAllPhotosAsync();
-            for(int i=0;i<5;i++)
-            {
-                ItemToBind itb = new ItemToBind();
-                itb.Text = "Hello world " + i.ToString();
-                itb.Photo = Photos[i];
-                ItemsToBind.Add(itb);
-            }
-            scatterView.ItemsSource = ItemsToBind;
+
+            scatterView.ItemsSource = await SampleItemToBind.GetSampleItemsToBindAsync();
         }
 
       
 
      
 
-        public class ItemToBind
-        {
-            public BitmapImage Photo { get; set; }
-            public string Text { get; set; }
-        }
+      
     }
 }
