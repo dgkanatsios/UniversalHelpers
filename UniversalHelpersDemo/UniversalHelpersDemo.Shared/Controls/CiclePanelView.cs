@@ -22,7 +22,7 @@ namespace UniversalHelpersDemo.Controls
 
         void CiclePanelView_LayoutUpdated(object sender, object e)
         {
-            CalculatePositions();
+            //CalculatePositions();
         }
 
         private ItemsPanelTemplate GetItemsPanelTemplate()
