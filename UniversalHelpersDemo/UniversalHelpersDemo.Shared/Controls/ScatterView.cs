@@ -87,7 +87,25 @@ namespace UniversalHelpersDemo.Controls
         public bool HasInertia
         {
             get { return (bool)GetValue(HasInertiaProperty); }
-            set { SetValue(HasInertiaProperty, value); }
+            set
+            {
+                SetValue(HasInertiaProperty, value);
+                FixBehavior();
+            }
+        }
+
+        private void FixBehavior()
+        {
+            for (int i = 0; i < this.Items.Count; i++)
+            {
+                FrameworkElement fe = GetFrameworkElementFromItem(i);
+
+                var behavior = Interaction.GetBehaviors(fe).OfType<DragElementBehavior>().First();
+
+                behavior.CanRotate = CanRotate;
+                behavior.CanScale = CanScale;
+                behavior.HasInertiaOnTranslate = HasInertia;
+            }
         }
 
         // Using a DependencyProperty as the backing store for HasInertia.  This enables animation, styling, binding, etc...
@@ -101,7 +119,11 @@ namespace UniversalHelpersDemo.Controls
         public bool CanRotate
         {
             get { return (bool)GetValue(CanRotateProperty); }
-            set { SetValue(CanRotateProperty, value); }
+            set
+            {
+                SetValue(CanRotateProperty, value);
+                FixBehavior();
+            }
         }
 
         // Using a DependencyProperty as the backing store for CanRotate.  This enables animation, styling, binding, etc...
@@ -113,14 +135,27 @@ namespace UniversalHelpersDemo.Controls
         public bool CanScale
         {
             get { return (bool)GetValue(CanScaleProperty); }
-            set { SetValue(CanScaleProperty, value); }
+            set
+            {
+                SetValue(CanScaleProperty, value);
+                FixBehavior();
+            }
         }
 
         // Using a DependencyProperty as the backing store for CanScale.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CanScaleProperty =
             DependencyProperty.Register("CanScale", typeof(bool), typeof(ScatterView), new PropertyMetadata(true));
 
-
+        private FrameworkElement GetFrameworkElementFromItem(int i)
+        {
+            DependencyObject dob = this.ContainerFromItem(this.Items[i]);
+            FrameworkElement fe = null;
+            if (VisualTreeHelper.GetChildrenCount(dob) == 0)
+                fe = dob as FrameworkElement;
+            else
+                fe = VisualTreeHelper.GetChild(dob, 0) as FrameworkElement;
+            return fe;
+        }
 
     }
 }

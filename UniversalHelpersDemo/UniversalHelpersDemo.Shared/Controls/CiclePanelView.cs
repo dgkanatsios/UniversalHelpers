@@ -46,10 +46,8 @@ namespace UniversalHelpersDemo.Controls
 
         private void CalculatePositions()
         {
-
             if (Items.Count == 0) return;
 
-            
             double width = this.Width;
             if (double.IsNaN(width))
                 width = this.ActualWidth;
@@ -77,6 +75,23 @@ namespace UniversalHelpersDemo.Controls
                 ct.TranslateX = radius * Math.Cos(radians * i);
                 ct.TranslateY = radius * Math.Sin(radians * i);
             }
+            if (AlignRotation)
+                FixRotations();
+        }
+
+        private void FixRotations()
+        {
+            if (Items.Count == 0) return;
+            double degrees = 360 / this.Items.Count;
+            double radians = (Math.PI / 180) * degrees;
+
+            for (int i = 0; i < this.Items.Count; i++)
+            {
+                FrameworkElement fe = GetFrameworkElementFromItem(i);
+                CompositeTransform ct = fe.RenderTransform as CompositeTransform;
+
+                ct.Rotation = degrees * i;
+            }
         }
 
         private FrameworkElement GetFrameworkElementFromItem(int i)
@@ -89,5 +104,23 @@ namespace UniversalHelpersDemo.Controls
                 fe = VisualTreeHelper.GetChild(dob, 0) as FrameworkElement;
             return fe;
         }
+
+
+
+        public bool AlignRotation
+        {
+            get { return (bool)GetValue(AlignRotationProperty); }
+            set
+            {
+                SetValue(AlignRotationProperty, value);
+                FixRotations();
+            }
+        }
+
+        // Using a DependencyProperty as the backing store for AlignRotation.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty AlignRotationProperty =
+            DependencyProperty.Register("AlignRotation", typeof(bool), typeof(CiclePanelView), new PropertyMetadata(false));
+
+
     }
 }
