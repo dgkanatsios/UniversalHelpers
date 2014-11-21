@@ -59,7 +59,7 @@ namespace UniversalHelpersDemo.Behaviors
 
         // Using a DependencyProperty as the backing store for AddErrorMessage.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty AddErrorMessageProperty =
-            DependencyProperty.Register("AddErrorMessage", typeof(bool), typeof(TextBoxValidatorBase), new PropertyMetadata(true));
+            DependencyProperty.Register("AddErrorMessage", typeof(bool), typeof(TextBoxValidatorBase), new PropertyMetadata(false));
 
         
 
