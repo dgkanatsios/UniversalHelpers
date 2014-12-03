@@ -109,6 +109,21 @@ namespace UniversalHelpersDemo.Controls
         public static readonly DependencyProperty ExpanderContentProperty =
             DependencyProperty.Register("ExpanderContent", typeof(object), typeof(Expander), new PropertyMetadata(null));
 
+
+
+
+        public Brush HeaderForeground
+        {
+            get { return (Brush)GetValue(HeaderForegroundProperty); }
+            set { SetValue(HeaderForegroundProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for HeaderForeground.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty HeaderForegroundProperty =
+            DependencyProperty.Register("HeaderForeground", typeof(Brush), typeof(Expander), new PropertyMetadata(new SolidColorBrush(Windows.UI.Colors.White)));
+
+        
+
         public EventHandler ExpandedChanged;
 
     }

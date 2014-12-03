@@ -10,21 +10,34 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <Controls:Expander HorizontalAlignment="Left" Margin="23,40,0,0" VerticalAlignment="Top"  Width="366" Background="LightGreen">
-            <Controls:Expander.ExpanderContent>
-                <StackPanel>
-                <TextBlock Text="Hello expander 1!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 2!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 3!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 4!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 5!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 6!" Foreground="Black" />
-                    <TextBlock Text="Hello expander 7!" Foreground="Black" />
-                </StackPanel>
-            </Controls:Expander.ExpanderContent>
-        </Controls:Expander>
-        <Controls:Expander x:Name="csloadedExpander" HorizontalAlignment="Left" Margin="23,222,0,0" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
-
+        <StackPanel Orientation="Vertical" Margin="23,40,0,0">
+            <Controls:Expander HorizontalAlignment="Left" Header="Expander 1" HeaderForeground="Red"  VerticalAlignment="Top"  Width="366" Background="LightGreen">
+                <Controls:Expander.ExpanderContent>
+                    <StackPanel>
+                        <TextBlock Text="Hello expander 1!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 2!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 3!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 4!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 5!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 6!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 7!" Foreground="Black" />
+                    </StackPanel>
+                </Controls:Expander.ExpanderContent>
+            </Controls:Expander>
+            <Controls:Expander x:Name="csloadedExpander" Header="Expander 2" HeaderForeground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightBlue" Width="374"/>
+            <Controls:Expander HorizontalAlignment="Left" Header="Expander 3" HeaderForeground="Green" VerticalAlignment="Top"  Width="366" Background="Red">
+                <Controls:Expander.ExpanderContent>
+                    <StackPanel>
+                        <TextBlock Text="Hello expander 1!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 2!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 3!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 4!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 5!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 6!" Foreground="Black" />
+                        <TextBlock Text="Hello expander 7!" Foreground="Black" />
+                    </StackPanel>
+                </Controls:Expander.ExpanderContent>
+            </Controls:Expander>
+        </StackPanel>
     </Grid>
 </helpers:ViewBase>

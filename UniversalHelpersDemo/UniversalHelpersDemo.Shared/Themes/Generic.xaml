@@ -42,7 +42,7 @@
 						</VisualStateManager.VisualStateGroups>
 
 						<Grid Grid.Row="0" Name="HeaderGrid">
-							<TextBlock x:Name="PART_HeaderText" HorizontalAlignment="Left" Margin="0,0" TextWrapping="Wrap" Text="{TemplateBinding Header}" VerticalAlignment="Top"/>
+							<TextBlock x:Name="PART_HeaderText" Foreground="{TemplateBinding HeaderForeground}" HorizontalAlignment="Left" Margin="0,0" TextWrapping="Wrap" Text="{TemplateBinding Header}" VerticalAlignment="Top"/>
 							<Button x:Name="PART_ExpandButton" RenderTransformOrigin="0.5,0.5"
 									Content="&#57361;"
 									 FontFamily="Segoe UI Symbol" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top">

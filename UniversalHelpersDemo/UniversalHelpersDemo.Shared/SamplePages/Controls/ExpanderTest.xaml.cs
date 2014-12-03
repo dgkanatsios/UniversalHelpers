@@ -36,6 +36,7 @@ namespace UniversalHelpersDemo
 
         void ExpanderTest_Loaded(object sender, RoutedEventArgs e)
         {
+            
             csloadedExpander.ExpanderContent =
                 new Ellipse() { Width = 100, Height = 100, Fill = new SolidColorBrush(Colors.Red) };
         }
