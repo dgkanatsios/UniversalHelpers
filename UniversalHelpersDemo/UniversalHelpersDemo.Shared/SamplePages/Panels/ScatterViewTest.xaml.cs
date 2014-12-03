@@ -35,32 +35,33 @@ namespace UniversalHelpersDemo
 
         void ScatterViewTest_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Ellipse> list = new List<Ellipse>();
-            Ellipse el1 = new Ellipse()
+            Random r = new Random();
+            List<Rectangle> list = new List<Rectangle>();
+            Rectangle el1 = new Rectangle()
             {
-                Width = 100,
-                Height = 100,
+                Width = r.Next(100,300),
+                Height = r.Next(100,300),
                 Fill =
                     new SolidColorBrush(Colors.Red)
             };
-            Ellipse el2 = new Ellipse()
+            Rectangle el2 = new Rectangle()
             {
-                Width = 100,
-                Height = 100,
+                Width = r.Next(100,300),
+                Height = r.Next(100,300),
                 Fill =
                     new SolidColorBrush(Colors.Green)
             };
-            Ellipse el3 = new Ellipse()
+            Rectangle el3 = new Rectangle()
             {
-                Width = 100,
-                Height = 100,
+                Width = r.Next(100,300),
+                Height = r.Next(100,300),
                 Fill =
                     new SolidColorBrush(Colors.Yellow)
             };
-            Ellipse el4 = new Ellipse()
+            Rectangle el4 = new Rectangle()
             {
-                Width = 100,
-                Height = 100,
+                Width = r.Next(100,300),
+                Height = r.Next(100,300),
                 Fill =
                     new SolidColorBrush(Colors.Blue)
             };
