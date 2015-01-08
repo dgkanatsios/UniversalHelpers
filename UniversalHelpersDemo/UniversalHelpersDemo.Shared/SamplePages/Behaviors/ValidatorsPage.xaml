@@ -16,7 +16,7 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<StackPanel Margin="48,55" Orientation="Vertical">
-			<StackPanel Orientation="Horizontal" Height="32">
+			<StackPanel Orientation="Horizontal">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
 						<Behaviors:TextRequiredFieldBehavior ErrorTextBlock="{Binding ElementName=textBlock}" ErrorMessage="Required Field" ValidateMode="Both"/>
@@ -25,7 +25,7 @@
 				<TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Style="{StaticResource ErrorTextStyle}"/>
 
 			</StackPanel>
-			<StackPanel Orientation="Horizontal" Height="32">
+			<StackPanel Orientation="Horizontal">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
 						<Behaviors:TextMinimumLengthBehavior ErrorTextBlock="{Binding ElementName=textBlock1}" MinimumLength="3" ErrorMessage="Text must be more than 3 characters" ValidateMode="Both"/>
@@ -34,7 +34,7 @@
 				<TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Style="{StaticResource ErrorTextStyle}"/>
 
 			</StackPanel>
-			<StackPanel Orientation="Horizontal" Height="32">
+			<StackPanel Orientation="Horizontal">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
 						<Behaviors:TextEmailBehavior ErrorTextBlock="{Binding ElementName=textBlock2}" ErrorMessage="Must be e-mail"/>
@@ -43,7 +43,7 @@
 				<TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Style="{StaticResource ErrorTextStyle}"/>
 
 			</StackPanel>
-			<StackPanel Orientation="Horizontal" Height="32">
+			<StackPanel Orientation="Horizontal">
 				<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
 					<Interactivity:Interaction.Behaviors>
 						<Behaviors:TextNumericDoubleBehavior ErrorMessage="Must be double" ErrorTextBlock="{Binding ElementName=textBlock3}"/>
