@@ -80,13 +80,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\..\UniversalHelpers\UniversalHelpers.csproj">
-      <Project>{d7e28887-92e8-46de-83a5-482625dbdac5}</Project>
-      <Name>UniversalHelpers</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
