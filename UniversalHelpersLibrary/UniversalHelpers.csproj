@@ -124,7 +124,6 @@
     <Compile Include="FrameworkElementExtensions.cs" />
     <Compile Include="Helpers\SampleItemToBind.cs" />
     <Compile Include="Helpers\Utilities.cs" />
-    <Compile Include="Helpers\ViewBase.cs" />
     <Compile Include="NavigationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RateHelpers.cs" />

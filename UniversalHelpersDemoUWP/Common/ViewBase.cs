@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UniversalHelpersDemo.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -12,7 +13,7 @@ namespace UniversalHelpersDemo.Helpers
     {
         public ViewBase()
         {
-            //this.navigationHelper = new NavigationHelper(this);
+            this.navigationHelper = new NavigationHelper(this);
 
            this.Loaded+=ViewBase_Loaded;
         }
@@ -41,10 +42,10 @@ namespace UniversalHelpersDemo.Helpers
             
         }
 
-        //private NavigationHelper navigationHelper;
+        private NavigationHelper navigationHelper;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //this.navigationHelper.OnNavigatedTo(e);
+            this.navigationHelper.OnNavigatedTo(e);
 
         }
 
@@ -56,7 +57,7 @@ namespace UniversalHelpersDemo.Helpers
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            //this.navigationHelper.OnNavigatedFrom(e);
+            this.navigationHelper.OnNavigatedFrom(e);
         }
     }
 }
