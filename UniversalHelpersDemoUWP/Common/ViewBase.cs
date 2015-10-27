@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using UniversalHelpersDemo.Common;
+using UniversalHelpersDemoUWP;
+using UniversalHelpersDemoUWP.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -14,31 +16,32 @@ namespace UniversalHelpersDemo.Helpers
         public ViewBase()
         {
             this.navigationHelper = new NavigationHelper(this);
+           
 
-           this.Loaded+=ViewBase_Loaded;
+            this.Loaded+=ViewBase_Loaded;
         }
-#if WINDOWS_APP
+
+       
         private Button backButton;
-#endif
+
 
         void ViewBase_Loaded(object sender, RoutedEventArgs e)
         {
-          
 
-
-#if WINDOWS_APP
-            Grid rootGrid = VisualTreeHelper.GetChild(Window.Current.Content, 0) as Grid;
-            var backButton = (Button)VisualTreeHelper.GetChild(rootGrid, 1) as Button;
-            if(!(this is MainPage))
+            if (!CommonUtilities.IsHardwareButtonsAPIPresent)
             {
-                backButton.Click -= backButton_Click; backButton.Click += backButton_Click;
-                backButton.Visibility = Visibility.Visible;
+                Grid rootGrid = VisualTreeHelper.GetChild(Window.Current.Content, 0) as Grid;
+                var backButton = (Button)VisualTreeHelper.GetChild(rootGrid, 1) as Button;
+                if (!(this is MainPage))
+                {
+                    backButton.Click -= backButton_Click; backButton.Click += backButton_Click;
+                    backButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    backButton.Visibility = Visibility.Collapsed;
+                }
             }
-            else
-            {
-                backButton.Visibility = Visibility.Collapsed;
-            }
-#endif
             
         }
 

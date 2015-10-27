@@ -29,11 +29,11 @@ namespace UniversalHelpersDemo
         {
             this.InitializeComponent();
         }
-        private void testButton_Click(object sender, RoutedEventArgs e)
+        private async void testButton_Click(object sender, RoutedEventArgs e)
         {
             //testButton.BeginTranslationToElementAsync(yellowRect, 3);
 
-            testButton.BeginTranslationToElementsAsync(new List<Tuple<FrameworkElement, double>>() { 
+            await testButton.BeginTranslationToElementsAsync(new List<Tuple<FrameworkElement, double>>() { 
             new Tuple<FrameworkElement, double> (yellowRect, 1),
             new Tuple<FrameworkElement, double> (greenRect,1),
             new Tuple<FrameworkElement, double> (redRect, 1),

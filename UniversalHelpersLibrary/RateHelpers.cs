@@ -73,12 +73,12 @@ namespace UniversalHelpers
 
         }
 
-        private async static void rate_RemindLater_Click(IUICommand command)
+        private static void rate_RemindLater_Click(IUICommand command)
         {
 
         }
 
-        private async static void rate_NoThanks_Click(IUICommand command)
+        private static void rate_NoThanks_Click(IUICommand command)
         {
             AppSettings.StoreSettingBool(Constants.FeedbackReminderSetting, false);
 

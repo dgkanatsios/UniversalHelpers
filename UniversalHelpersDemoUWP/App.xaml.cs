@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UniversalHelpersDemoUWP.Common;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -48,6 +49,7 @@ namespace UniversalHelpersDemoUWP
 #endif
 
             Frame rootFrame = Window.Current.Content as Frame;
+            
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -55,6 +57,12 @@ namespace UniversalHelpersDemoUWP
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+
+
+                if (!CommonUtilities.IsHardwareButtonsAPIPresent)
+                {
+                    rootFrame.Style = this.Resources["RootFrameStyle"] as Style;
+                }
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
@@ -67,6 +75,7 @@ namespace UniversalHelpersDemoUWP
                 Window.Current.Content = rootFrame;
             }
 
+
             if (rootFrame.Content == null)
             {
                 // When the navigation stack isn't restored navigate to the first page,
@@ -74,6 +83,9 @@ namespace UniversalHelpersDemoUWP
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
+
+           
+
             // Ensure the current window is active
             Window.Current.Activate();
         }

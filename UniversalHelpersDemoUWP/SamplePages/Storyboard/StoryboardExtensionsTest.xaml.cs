@@ -47,13 +47,13 @@ namespace UniversalHelpersDemo
 
         }
 
-        private void Parallel_Click(object sender, RoutedEventArgs e)
+        private async void Parallel_Click(object sender, RoutedEventArgs e)
         {
-            rectangle.TranslateToAsync(10, 10, 1);
-            rectangle.AnimateOpacityToAsync(0.3, 1);
-            rectangle.TranslateToAsync(30, -10, 1);
-            rectangle.RotateByAsync(45, 1);
-            rectangle.SkewByAsync(3, 3, 2);
+            await rectangle.TranslateToAsync(10, 10, 1);
+            await rectangle.AnimateOpacityToAsync(0.3, 1);
+            await rectangle.TranslateToAsync(30, -10, 1);
+            await rectangle.RotateByAsync(45, 1);
+            await rectangle.SkewByAsync(3, 3, 2);
         }
 
     }

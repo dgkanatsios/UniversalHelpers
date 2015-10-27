@@ -32,9 +32,9 @@ namespace UniversalHelpersDemo
 
         }
 
-        public void ShowDialog(object Tag)
+        public async void ShowDialog(object Tag)
         {
-            (new MessageDialog(Tag.ToString())).ShowAsync();
+            await (new MessageDialog(Tag.ToString())).ShowAsync();
         }
 
     }
