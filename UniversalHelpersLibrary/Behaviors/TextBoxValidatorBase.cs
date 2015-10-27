@@ -5,7 +5,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     public abstract class TextBoxValidatorBase : DependencyObject, IBehavior
     {

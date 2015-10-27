@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace UniversalHelpersDemo.Helpers
+namespace UniversalHelpers.Helpers
 {
     public class SampleItemToBind
     {

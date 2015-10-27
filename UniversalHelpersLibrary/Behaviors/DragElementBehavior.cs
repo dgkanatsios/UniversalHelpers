@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UniversalHelpersDemo.Behaviors;
+using UniversalHelpers.Behaviors;
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 
-namespace UniversalHelpersDemo.Shared.Behaviors
+namespace UniversalHelpers.Behaviors
 {
 
     [TypeConstraint(typeof(FrameworkElement))]

@@ -13,12 +13,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UniversalHelpers;
-using UniversalHelpersDemo.Common;
-using UniversalHelpersDemo.Helpers;
+using UniversalHelpersDemoUWP.Common;
+using UniversalHelpersDemoUWP.Helpers;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UniversalHelpersDemo
+namespace UniversalHelpersDemoUWP
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

@@ -5,7 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using System.Linq;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     internal static class Utilities
     {

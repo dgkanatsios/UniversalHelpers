@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     [TypeConstraint(typeof(TextBox))]
     public class TextRequiredFieldBehavior : TextBoxValidatorBase

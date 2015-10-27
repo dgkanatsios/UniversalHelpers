@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using UniversalHelpersDemo.Shared.Behaviors;
+using UniversalHelpers.Behaviors;
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -15,7 +15,7 @@ using UniversalHelpers.AwaitableUI;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Markup;
 
-namespace UniversalHelpersDemo.Controls
+namespace UniversalHelpers.Controls
 {
     public class ScatterView : ItemsControl
     {

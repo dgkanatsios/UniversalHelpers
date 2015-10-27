@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media.Animation;
 using System.Reflection;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     [TypeConstraint(typeof(FrameworkElement))]
     public class TapStoryboardBehavior : DependencyObject, IBehavior

@@ -9,7 +9,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 
-namespace UniversalHelpersDemo.Controls
+namespace UniversalHelpers.Controls
 {
     public class CiclePanelView : ItemsControl
     {

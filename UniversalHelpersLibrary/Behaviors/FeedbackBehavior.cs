@@ -6,7 +6,7 @@ using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     [TypeConstraint(typeof(FrameworkElement))]
     public class FeedbackBehavior : DependencyObject, IBehavior

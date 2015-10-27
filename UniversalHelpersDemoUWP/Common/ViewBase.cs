@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UniversalHelpersDemo.Common;
-using UniversalHelpersDemoUWP;
 using UniversalHelpersDemoUWP.Common;
+using UniversalHelpersDemoUWP;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace UniversalHelpersDemo.Helpers
+namespace UniversalHelpersDemoUWP.Helpers
 {
     public class ViewBase : Page
     {

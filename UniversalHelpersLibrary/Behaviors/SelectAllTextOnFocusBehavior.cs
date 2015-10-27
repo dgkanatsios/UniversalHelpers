@@ -5,7 +5,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace UniversalHelpersDemo.Behaviors
+namespace UniversalHelpers.Behaviors
 {
     [TypeConstraint(typeof(TextBox))]
     public class SelectAllTextOnFocusBehavior : DependencyObject, IBehavior

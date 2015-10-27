@@ -6,7 +6,7 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace UniversalHelpersDemo.Helpers
+namespace UniversalHelpers.Helpers
 {
     public static class Utilities
     {
