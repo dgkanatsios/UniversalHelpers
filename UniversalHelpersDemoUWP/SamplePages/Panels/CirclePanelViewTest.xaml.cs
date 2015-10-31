@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UniversalHelpers.Helpers;
 using UniversalHelpersDemoUWP.Helpers;
 using Windows.Foundation;
 using Windows.Foundation.Collections;

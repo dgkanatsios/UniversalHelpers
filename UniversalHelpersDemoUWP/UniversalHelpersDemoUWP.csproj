@@ -102,6 +102,8 @@
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="Common\ViewBase.cs" />
+    <Compile Include="Helpers\SampleItemToBind.cs" />
+    <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -238,10 +240,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="SamplePages\Storyboard\StoryboardExtensionsTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Specific.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

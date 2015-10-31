@@ -7,6 +7,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Core;
+using Windows.ApplicationModel;
 
 namespace UniversalHelpersDemoUWP.Helpers
 {
@@ -14,34 +16,25 @@ namespace UniversalHelpersDemoUWP.Helpers
     {
         public ViewBase()
         {
-            this.navigationHelper = new NavigationHelper(this);
-           
-
-            this.Loaded+=ViewBase_Loaded;
+            if (!DesignMode.DesignModeEnabled)
+            {
+                this.navigationHelper = new NavigationHelper(this);
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+                SystemNavigationManager.GetForCurrentView().BackRequested += ViewBase_BackRequested;
+                this.Loaded += ViewBase_Loaded;
+            }
         }
 
-       
-        private Button backButton;
-
-
-        void ViewBase_Loaded(object sender, RoutedEventArgs e)
+        private void ViewBase_Loaded(object sender, RoutedEventArgs e)
         {
+            if (this is MainPage)
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+        }
 
-            if (!CommonUtilities.IsHardwareButtonsAPIPresent)
-            {
-                Grid rootGrid = VisualTreeHelper.GetChild(Window.Current.Content, 0) as Grid;
-                var backButton = (Button)VisualTreeHelper.GetChild(rootGrid, 1) as Button;
-                if (!(this is MainPage))
-                {
-                    backButton.Click -= backButton_Click; backButton.Click += backButton_Click;
-                    backButton.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    backButton.Visibility = Visibility.Collapsed;
-                }
-            }
-            
+        private void ViewBase_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+                Frame.GoBack();
         }
 
         private NavigationHelper navigationHelper;
@@ -51,12 +44,7 @@ namespace UniversalHelpersDemoUWP.Helpers
 
         }
 
-        void backButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Frame.CanGoBack)
-                Frame.GoBack();
-        }
-
+ 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedFrom(e);

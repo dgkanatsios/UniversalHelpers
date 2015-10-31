@@ -59,11 +59,6 @@ namespace UniversalHelpersDemoUWP
                 rootFrame = new Frame();
 
 
-                if (!CommonUtilities.IsHardwareButtonsAPIPresent)
-                {
-                    rootFrame.Style = this.Resources["RootFrameStyle"] as Style;
-                }
-
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
