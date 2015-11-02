@@ -126,8 +126,11 @@
     <Compile Include="SamplePages\Controls\ExpanderTest.xaml.cs">
       <DependentUpon>ExpanderTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SamplePages\Panels\CirclePanelViewTest.xaml.cs">
-      <DependentUpon>CirclePanelViewTest.xaml</DependentUpon>
+    <Compile Include="SamplePages\Panels\DiagonalPanel.xaml.cs">
+      <DependentUpon>DiagonalPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\Panels\CirclePanelTest.xaml.cs">
+      <DependentUpon>CirclePanelTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\Panels\ScatterViewTest.xaml.cs">
       <DependentUpon>ScatterViewTest.xaml</DependentUpon>
@@ -219,7 +222,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SamplePages\Panels\CirclePanelViewTest.xaml">
+    <Page Include="SamplePages\Panels\DiagonalPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SamplePages\Panels\CirclePanelTest.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

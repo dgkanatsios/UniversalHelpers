@@ -116,7 +116,8 @@
     <Compile Include="Behaviors\TextBoxValidatorBase.cs" />
     <Compile Include="Behaviors\Utilities.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Controls\CiclePanelView.cs" />
+    <Compile Include="Controls\CiclePanel.cs" />
+    <Compile Include="Controls\DiagonalPanel.cs" />
     <Compile Include="Controls\Expander.cs" />
     <Compile Include="Controls\ScatterView.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />

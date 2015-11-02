@@ -21,17 +21,17 @@ namespace UniversalHelpersDemoUWP
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CirclePanelViewTest : ViewBase
+    public sealed partial class DiagonalPanel : ViewBase
     {
-        public CirclePanelViewTest()
+        public DiagonalPanel()
         {
             this.InitializeComponent();
-            Loaded += CirclePanelViewTest_Loaded;
+            Loaded += DiagonalPanel_Loaded;
         }
 
-        async void CirclePanelViewTest_Loaded(object sender, RoutedEventArgs e)
+        async void DiagonalPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            this.circlePanelView.ItemsSource = await SampleItemToBind.GetSampleItemsToBindAsync();
+            this.diagonalPanel.ItemsSource = await SampleItemToBind.GetSampleItemsToBindAsync();
         }
     }
 }

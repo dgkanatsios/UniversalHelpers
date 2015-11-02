@@ -11,18 +11,19 @@ using Windows.Foundation;
 
 namespace UniversalHelpers.Controls
 {
-    public class CiclePanelView : ItemsControl
+    public class CiclePanel : ItemsControl
     {
-        public CiclePanelView()
+        public CiclePanel()
             : base()
         {
             this.ItemsPanel = GetItemsPanelTemplate();
             this.LayoutUpdated += CiclePanelView_LayoutUpdated;
         }
 
-        void CiclePanelView_LayoutUpdated(object sender, object e)
+        async void CiclePanelView_LayoutUpdated(object sender, object e)
         {
-            //CalculatePositions();
+            await this.WaitForLayoutUpdateAsync();
+            CalculatePositions();
         }
 
         private ItemsPanelTemplate GetItemsPanelTemplate()
@@ -119,7 +120,7 @@ namespace UniversalHelpers.Controls
 
         // Using a DependencyProperty as the backing store for AlignRotation.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty AlignRotationProperty =
-            DependencyProperty.Register("AlignRotation", typeof(bool), typeof(CiclePanelView), new PropertyMetadata(false));
+            DependencyProperty.Register("AlignRotation", typeof(bool), typeof(CiclePanel), new PropertyMetadata(false));
 
 
     }
