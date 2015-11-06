@@ -35,6 +35,7 @@ namespace UniversalHelpersDemoUWP.Helpers
         {
             if (Frame.CanGoBack)
                 Frame.GoBack();
+            e.Handled = true;
         }
 
         private NavigationHelper navigationHelper;
