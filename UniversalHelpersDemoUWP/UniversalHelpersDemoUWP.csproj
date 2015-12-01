@@ -126,11 +126,9 @@
     <Compile Include="SamplePages\Controls\ExpanderTest.xaml.cs">
       <DependentUpon>ExpanderTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SamplePages\Panels\CirclePanelTest.xaml.cs" />
     <Compile Include="SamplePages\Panels\DiagonalPanel.xaml.cs">
       <DependentUpon>DiagonalPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SamplePages\Panels\CirclePanelTest.xaml.cs">
-      <DependentUpon>CirclePanelTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\Panels\ScatterViewTest.xaml.cs">
       <DependentUpon>ScatterViewTest.xaml</DependentUpon>
@@ -222,11 +220,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SamplePages\Panels\DiagonalPanel.xaml">
+    <Page Include="SamplePages\Panels\CirclePanelTest.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SamplePages\Panels\CirclePanelTest.xaml">
+    <Page Include="SamplePages\Panels\DiagonalPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -250,11 +248,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
-      <Name>Behaviors SDK %28XAML%29</Name>
-    </SDKReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UniversalHelpersLibrary\UniversalHelpers.csproj">
