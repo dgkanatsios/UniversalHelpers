@@ -120,9 +120,11 @@ namespace UniversalHelpers.Behaviors
             element.ManipulationStarted += element_ManipulationStarted;
             element.ManipulationDelta += element_ManipulationDelta;
             element.ManipulationCompleted += element_ManipulationCompleted;
-            
-          
 
+
+            CompositeTransform ct = element.RenderTransform as CompositeTransform;
+            if (ct == null)
+                ct = new CompositeTransform();
         }
 
         void element_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)

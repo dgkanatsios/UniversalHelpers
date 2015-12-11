@@ -201,7 +201,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -1789,7 +1789,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -3410,7 +3410,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -5036,7 +5036,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -6657,7 +6657,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -8283,7 +8283,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -9904,7 +9904,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -11938,8 +11938,8 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-      "sha512": "naPuhYn3Igeohe8MVQhqzNRZo2Xt0D6+KpDbaaODSchqjsyj9lUqReKDLq9s5ffOJZehELjMIIW6Fx8AJOrgQw==",
+    "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.3": {
+      "sha512": "N/HJa+ld/kKIKQaTTBY/ytLukfujKkBMww59p9qmPkEpyHZRMYB8FNalghu1rFMCXoSx9cWD8U4nt/r7qLQmVg==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -11955,7 +11955,7 @@
         "lib/uap10.0/Microsoft.Xaml.Interactivity.xml",
         "lib/uap10.0/Microsoft.Xaml.Interactivity/Properties/Microsoft.Xaml.Interactivity.rd.xml",
         "Microsoft.Xaml.Behaviors.Uwp.Managed.nuspec",
-        "package/services/metadata/core-properties/e091ec76f6a6467e90828900723ae8af.psmdcp"
+        "package/services/metadata/core-properties/3c85324cf8b64508a39f4ccba86cb561.psmdcp"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -14657,7 +14657,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "Microsoft.Xaml.Behaviors.Uwp.Managed >= 1.0.2"
+      "Microsoft.Xaml.Behaviors.Uwp.Managed >= 1.0.3"
     ],
     "UAP,Version=v10.0": []
   }
