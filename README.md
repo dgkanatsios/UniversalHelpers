@@ -1,6 +1,6 @@
 UniversalHelpers
 ================
-[Also check my [blog post](http://studentguru.gr/b/dt008/archive/2014/08/08/introducing-universal-helpers-for-windows-store-apps) for this first release]
+[Also check my [blog post](http://dgkanatsios.com/2014/08/08/introducing-universal-helpers-for-windows-store-apps-3/) for this first release]
 
 What's here?
 First of all, there are some Blend Behaviors. I love behaviors! Easy just as a Drag’n’Drop, yet so powerful! What’s even more great is that Windows 8.1 SDK has a Behaviors SDK, which, to no one's surprise, works with Windows Phone 8.1 Store apps. A limitation right now is that you can’t (at least [easily](http://dotnet.dzone.com/articles/writing-behaviors-pcl-windows)) write Behaviors in a portable class library, that’s why I’ve implemented them in the Shared project. Let’s see them, one by one.

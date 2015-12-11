@@ -13,11 +13,13 @@
         <controls:ScatterView x:Name="scatterView">
             <controls:ScatterView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top"
+                    <Border BorderBrush="Red" BorderThickness="1">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top"
                         Orientation="Horizontal" Background="White" Width="200">
-                        <TextBlock Text="{Binding Text}" Foreground="Black" Width="150"/>
-                        <Image Source="{Binding Photo}" Width="50" Height="50"/>
-                    </StackPanel>
+                            <TextBlock Text="{Binding Text}" Foreground="Black" Width="150"/>
+                            <Image Source="{Binding Photo}" Width="50" Height="50"/>
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </controls:ScatterView.ItemTemplate>
         </controls:ScatterView>

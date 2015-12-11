@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalHelpersDemoUWP", "UniversalHelpersDemoUWP\UniversalHelpersDemoUWP.csproj", "{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}"
 EndProject
@@ -32,6 +32,8 @@ Global
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Debug|x86.Build.0 = Debug|x86
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Debug|x86.Deploy.0 = Debug|x86
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|Any CPU.ActiveCfg = Release|x86
+		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|Any CPU.Build.0 = Release|x86
+		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|Any CPU.Deploy.0 = Release|x86
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|ARM.ActiveCfg = Release|ARM
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|ARM.Build.0 = Release|ARM
 		{BECC294C-62C5-4007-8CB5-A2CC5ADCD991}.Release|ARM.Deploy.0 = Release|ARM
