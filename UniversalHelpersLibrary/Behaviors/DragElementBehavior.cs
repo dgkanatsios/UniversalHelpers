@@ -124,7 +124,7 @@ namespace UniversalHelpers.Behaviors
 
             CompositeTransform ct = element.RenderTransform as CompositeTransform;
             if (ct == null)
-                ct = new CompositeTransform();
+                element.RenderTransform = new CompositeTransform();
         }
 
         void element_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)

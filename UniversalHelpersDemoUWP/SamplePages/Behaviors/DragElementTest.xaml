@@ -11,9 +11,6 @@
 
 	<Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Rectangle Fill="#FF3B3BB9" HorizontalAlignment="Left" Height="115" Margin="25,51,0,0" Stroke="Black" VerticalAlignment="Top" Width="114">
-			<Rectangle.RenderTransform>
-				<CompositeTransform/>
-			</Rectangle.RenderTransform>
 			<Interactivity:Interaction.Behaviors>
 				<Behaviors:DragElementBehavior CanRotate="True" CanScale="True" Container="{Binding ElementName=grid}" MaxScale="2" HasInertiaOnTranslate="True"/>
 			</Interactivity:Interaction.Behaviors>
