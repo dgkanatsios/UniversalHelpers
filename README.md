@@ -1,3 +1,5 @@
+[![unofficial Google Analytics for GitHub](https://gaforgithub.azurewebsites.net/api?repo=UniversalHelpers)](https://github.com/dgkanatsios/gaforgithub)
+
 UniversalHelpers
 ================
 A library containing useful behaviors and other stuff for Universal Windows Platform (UWP) projects.
